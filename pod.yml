@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world-pod
+  labels:
+    name: node
+spec:
+  containers:
+    - name: hello-world
+      image: rajmanohar21/helloworld
+      ports:
+        - containerPort: 4000

@@ -3,7 +3,7 @@ kind: Deployment
 metadata: 
   name: my-helloworld-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-app
@@ -13,5 +13,7 @@ spec:
         app: my-app
     spec:
       containers:
-        - name: helloworld
-          image: rajmanohar21/helloworld
+        - name: pythonapp
+          image: sheshuvalandas/pythonapp:latest
+          ports:
+          - containerPort: 5001
